@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hector Monroy "Monrock"</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Verdana", sans-serif;
+    }
+
+    body {
+        margin: 0;
+        background: #f2f2f2;
+    }
+
+    .container {
+        max-width: 420px;
+        margin: 0 auto;
+        background: white;
+        min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+        height: 280px;
+        background: linear-gradient(180deg, black  0%, gray 100%);
+        position: relative;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 5px solid gold;
+        object-fit: cover;
+        background: #ddd;
+    }
+
+    .name {
+        margin-top: 12px;
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+    }
+
+    /* Action buttons */
+    .actions {
+        position: absolute;
+        bottom: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 16px;
+    }
+
+    .action-btn {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: white;
+        border: none;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        font-size: 22px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .action-btn:hover {
+        transform: scale(1.05);
+    }
+
+    /* Content */
+    .content {
+        padding: 56px 24px 24px;
+    }
+
+    .info-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #fafafa;
+        padding: 16px;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+		text-align: justify;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: silver;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #BFAB49;
+    }
+
+    .label {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 4px;
+    }
+
+    .value {
+        font-size: 16px;
+        font-weight: 500;
+        color: #111;
+    }
+	/* Image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 24px;
+	background: #fafafa;
+}
+
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 4px inset gray;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <img src="12.png" alt="Avatar" class="avatar">
+        <div class="name">Hector Monroy "Monrock" <br>Artista Pop </div>
+
+        <div class="actions">
+            <button class="action-btn" title="Call">🖌</button>
+            <button class="action-btn" title="Email">🎨</button>
+			
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="info-card">
+            <div class="icon">📞</div>
+            <div>
+                <div class="label">Telefono</div>
+                <div class="value">12345678</div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">✉️</div>
+            <div>
+                <div class="label">Email</div>
+                <div class="value">correo@email.com</div>
+				
+            </div>
+        </div>
+		<div class="info-card">
+            <div class="icon">🌎</div>
+            <div>
+                <div class="label">Pagina web</div>
+                <div class="value">www.monrockcollection.com</div>
+				
+            </div>
+        </div>
+		
+		<div class="info-card">
+            
+            <div>
+                <p>Héctor Monroy ''Monrock''. Maestro mexicano del estilo pop art, nacido en 1953 en Querétaro, México. Estudió publicidad así como dibujo artístico a finales de los años 70, y comenzó a trabajar en la industria de comunicaciones audiovisuales como diseñador gráfico. A la edad de diecisiete años realizó su primer dibujo en estilo pop art de The Beatles. Con más de 40 años de trayectoria en el mundo del arte, sus retratos de íconos, mitos y leyendas de la música rock y del cine logran capturar todos los detalles y la personalidad de esas maravillosas décadas nostálgicas de los años 50, 60 y 70; como: Marilyn Monroe, The Beatles, Pink Floyd, Led Zeppelin, Elvis Presley, Madonna, Muhammad Ali y más.</p>
+				
+            </div>
+        </div>
+		<div class="image-grid">
+    <img src="13.png" alt="Gallery image 1">
+    <img src="14.png" alt="Gallery image 2">
+    <img src="15.png" alt="Gallery image 3">
+</div>
+    </div>
+
+</div>
+
+</body>
+</html>
