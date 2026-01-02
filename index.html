@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <link rel="icon" href="favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hector Monroy "Monrock"</title>
@@ -9,12 +11,13 @@
 <style>
     * {
         box-sizing: border-box;
-        font-family: "Verdana", sans-serif;
+        
     }
 
     body {
+	    font-family: "Inter", system-ui, sans-serif;
         margin: 0;
-        background: #f2f2f2;
+        background: black;
     }
 
     .container {
@@ -22,7 +25,19 @@
         margin: 0 auto;
         background: white;
         min-height: 100vh;
+		animation: fadeUp 0.6s ease-out;
     }
+	
+	@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
     /* Header */
     .header {
@@ -34,6 +49,17 @@
         text-align: center;
         padding-top: 40px;
     }
+	
+	.header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top,
+        rgba(255,255,255,0.25),
+        transparent 60%);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
 
     .avatar {
         width: 120px;
@@ -49,7 +75,14 @@
         font-size: 22px;
         font-weight: 600;
         color: white;
+		letter-spacing: 0.5px;
     }
+	
+	.subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin-top: 6px;
+}
 
     /* Action buttons */
     .actions {
@@ -88,7 +121,8 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        background: #fafafa;
+        background: linear-gradient(180deg, white, lightgray);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
         padding: 16px;
         border-radius: 16px;
         margin-bottom: 16px;
@@ -120,15 +154,15 @@
         color: #111;
     }
 	/* Image grid */
-.image-grid {
+    .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     padding: 24px;
-	background: #fafafa;
+	background: linear-gradient(180deg, white, lightgray);
 }
 
-.image-grid img {
+    .image-grid img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -145,7 +179,8 @@
 
     <div class="header">
         <img src="12.png" alt="Avatar" class="avatar">
-        <div class="name">Hector Monroy "Monrock" <br>Artista Pop </div>
+        <div class="name">Hector Monroy "Monrock"</div>
+		<div class="subtitle">Artista Pop</div>
 
         <div class="actions">
             <button class="action-btn" title="Call">🖌</button>
@@ -198,5 +233,3 @@
 
 </body>
 </html>
-
-
